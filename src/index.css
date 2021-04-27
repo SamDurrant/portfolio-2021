@@ -1,13 +1,129 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700;900&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*::before,
+*::after {
+  box-sizing: initial;
+}
+
+:root {
+  --dark: #021027;
+  --light: #faf2ef;
+  --dark-blue: #031d44;
+  --med-blue: #04395e;
+  --dark-teal: #3a6e73;
+  --med-teal: #70a288;
+  --yellow: #dab785;
+  --copper: #d5896f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--light);
+  color: var(--light);
+  height: 100vh;
+  overflow: scroll;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(250, 242, 239, 0.95),
+      rgba(250, 242, 239, 0.95)
+    ),
+    url('./assets/bestDog.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+a {
+  font-size: clamp(
+    var(--fluid-type-min, 1rem),
+    calc(1rem + var(--fluid-type-target, 3vw)),
+    var(--fluid-type-max, 1.3rem)
+  );
+}
+
+h1 {
+  --fluid-type-min: 3.4rem;
+  --fluid-type-max: 5rem;
+  --fluid-type-target: 5vw;
+}
+
+h2 {
+  --fluid-type-min: 1.8rem;
+  --fluid-type-max: 4rem;
+}
+
+h3 {
+  --fluid-type-min: 1.5rem;
+  --fluid-type-max: 2rem;
+}
+
+h4 {
+  --fluid-type-min: 1.5rem;
+  --fluid-type-max: 4rem;
+  --fluid-type-target: 5vw;
+}
+
+p {
+  --fluid-type-min: 0.4rem;
+  --fluid-type-max: 1.5rem;
+  --fluid-type-target: 0.6vw;
+}
+
+a {
+  --fluid-type-min: 0.7rem;
+  --fluid-type-max: 1.5rem;
+  --fluid-type-target: 1vw;
+}
+
+/* grid */
+.grid {
+  min-height: 100vh;
+  width: calc(100vw - 2rem);
+  max-width: 75rem;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 1rem;
+  margin: 1rem auto;
+}
+
+.grid > * {
+  display: grid;
+  align-items: center;
+}
+
+/* margins */
+.margin-sm {
+  margin-top: 15vh;
+}
+
+.margin-med {
+  margin-top: 30vh;
 }
