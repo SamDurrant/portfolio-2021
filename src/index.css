@@ -22,6 +22,11 @@
   --copper: #d5896f;
 }
 
+::selection {
+  background-color: var(--dark-blue);
+  color: var(--yellow);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -32,18 +37,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: var(--light);
   color: var(--light);
-  height: 100vh;
-  overflow: scroll;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(250, 242, 239, 0.95),
-      rgba(250, 242, 239, 0.95)
-    ),
-    url('./assets/bestDog.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
 }
 
 ul {
@@ -73,6 +66,8 @@ h1 {
   --fluid-type-min: 3.4rem;
   --fluid-type-max: 5rem;
   --fluid-type-target: 5vw;
+
+  max-width: 7ch;
 }
 
 h2 {
@@ -106,12 +101,12 @@ a {
 /* grid */
 .grid {
   min-height: 100vh;
-  width: calc(100vw - 2rem);
+  width: calc(100% - 2rem);
   max-width: 75rem;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-gap: 1rem;
-  margin: 1rem auto;
+  margin: 0 auto;
 }
 
 .grid > * {
@@ -126,4 +121,10 @@ a {
 
 .margin-med {
   margin-top: 30vh;
+}
+
+@media only screen and (min-width: 600px) {
+  h1 {
+    max-width: 15ch;
+  }
 }

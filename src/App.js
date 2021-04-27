@@ -7,6 +7,7 @@ import IconLink from './components/IconLink/IconLink'
 function App() {
   return (
     <div className="App">
+      <div className="background"></div>
       <div className="grid">
         <nav className="links nav-links">
           {content.navLinks.map((link) => (
