@@ -42,8 +42,24 @@ const content = {
 
   projects: [
     {
+      name: 'Great Gradient!',
+      description: `A background gradient generating application that allows multiple gradients to be layered. Customize each layer through repositioning or resizing.`,
+      tech: '#React #CSS',
+      links: [
+        {
+          link: 'https://greatgradient.netlify.app/',
+          linkAriaLabel: 'link to great gradient site',
+          text: 'site',
+        },
+        {
+          link: 'https://github.com/SamDurrant/great-gradient',
+          linkAriaLabel: 'link to great gradient client code',
+          text: 'client',
+        },
+      ],
+    },
+    {
       name: 'Scribbles',
-      alttext: 'Scribbles application screenshot',
       description: `A classic note-taking application using the PERN stack. Increased my understanding of a full stack web application while strengthening my front end skills.`,
       tech: '#React #Express #Postgres #CSS',
       links: [
@@ -66,8 +82,7 @@ const content = {
     },
     {
       name: 'Soul Seeds',
-      alttext: 'Soul Seeds application screenshot',
-      description: `A monthly/yearly subscription based application inspired by conversations with a friend. Soul Seeds currently has a functional cart while I work on learning how to build a back end.`,
+      description: `A static site for a fictional monthly/yearly subscription based application inspired by conversations with a friend.`,
       tech: '#React #CSS',
       links: [
         {
@@ -84,9 +99,8 @@ const content = {
     },
     {
       name: 'Snaps',
-      alttext: 'Snaps application screenshot',
       description: `Get organized with snaps, an application that allows you to organize notes, ideas and vocabulary on double-sided cards.`,
-      tech: '#HTML #Sass #JavaScript/ES6 #Webpack #Babel',
+      tech: '#HTML #Sass #JavaScript/ES6',
       links: [
         {
           link: 'https://snaps.netlify.com/',
@@ -96,24 +110,6 @@ const content = {
         {
           link: 'https://github.com/SamDurrant/snaps',
           linkAriaLabel: 'link to snaps client code',
-          text: 'client',
-        },
-      ],
-    },
-    {
-      name: 'Brunch Birds',
-      alttext: 'Brunch Birds application screenshot',
-      description: `Passionate about healthy eating, I wanted to create a well-thought out restaurant website that was easy to navigate and responsive.`,
-      tech: '#HTML #Sass #JavaScript/ES6 #Webpack #Babel',
-      links: [
-        {
-          link: 'https://brunchbirds.netlify.com/',
-          linkAriaLabel: 'link to brunchbirds site',
-          text: 'site',
-        },
-        {
-          link: 'https://github.com/SamDurrant/brunch-birds',
-          linkAriaLabel: 'link to brunchbirds client code',
           text: 'client',
         },
       ],
